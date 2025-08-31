@@ -24,6 +24,27 @@ Fond: {ticker}
 
 """
 
+import yfinance as yf
+from datetime import datetime
+
+ticker = "0P0000YVZ3.ST"  # LF Global Aktiefond A på Yahoo
+fund = yf.Ticker(ticker)
+
+# Hämta 2 års historik (daglig data)
+hist = fund.history(period="2y")
+
+# Räkna 12-månaders (≈ 252 handelsdagar) glidande medelvärde
+hist["MA12m"] = hist["Close"].rolling(window=252).mean()
+
+# Senaste värde
+latest_date = hist.index[-1].strftime("%Y-%m-%d")
+latest_price = hist["Close"].iloc[-1]
+latest_ma12 = hist["MA12m"].iloc[-1]
+
+print(f"Senaste datum: {latest_date}")
+print(f"Senaste stängningskurs: {latest_price:.2f}")
+print(f"12 mån glidande medelvärde: {latest_ma12:.2f}")
+
 with open("fond_utveckling.txt", "a", encoding="utf-8") as f:
     f.write(text + "\n")
 
