@@ -19,7 +19,7 @@ jobs:
         python-version: "3.x"
 
     - name: Install dependencies
-      run: pip3 install requests
+      run: pip3 install requests yfinance
 
     - name: Run script
       run: python GlobalMomentum.py
