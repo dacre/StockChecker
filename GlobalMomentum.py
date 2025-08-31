@@ -1,43 +1,30 @@
 # created using chatgpt
 
-import requests
+# Filename: fetch_fund_yahoo.py
+import yfinance as yf
 from datetime import datetime
 
-# Ange Avanza-fond ID
-fond_id = "4075"  # LF Global Indexnära
+ticker = "0P0000YVZ3.ST"  # Länsförsäkringar Global Indexnära
+fund = yf.Ticker(ticker)
 
-# Avanza API URL
-url = f"https://www.avanza.se/_api/fund-guide/fund/{fond_id}"
+# Vi hämtar historisk data och beräkna 3-månars utveckling manuellt
+hist = fund.history(period="3mo")
+if len(hist) < 2:
+    raise ValueError("För lite historisk data")
 
-try:
-    response = requests.get(url)
-    response.raise_for_status()
-    data = response.json()
-except Exception as e:
-    print(f"Fel vid hämtning av data: {e}")
-    exit(1)
+start_price = hist['Close'].iloc[0]
+end_price = hist['Close'].iloc[-1]
+pct_change = (end_price / start_price - 1) * 100
 
-try:
-    fond_namn = data.get("name", "Okänd fond")
-    three_months = data.get("development", {}).get("threeMonths")
-    six_months = data.get("development", {}).get("sixMonths")
-    one_year = data.get("development", {}).get("oneYear")
-    
-    # Skapa textblock
-    date_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    text = f"""{date_str}
-    
-    Fond: {fond_namn}
-    3 mån: {three_months:.2%}
-    6 mån: {six_months:.2%}
-    12 mån: {one_year:.2%}
-    """
-    
-    # Append till fil
-    with open("fond_utveckling.txt", "a", encoding="utf-8") as f:
-        f.write(text + "\n")
-    
-    print("Data har sparats till fond_utveckling.txt")
-except Exception as e:
-    print(f"Fel vid skrivning av data: {e}")
-    exit(1)
+date_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+text = f"""{date_str}
+
+Fond: {ticker}
+3 mån utveckling: {pct_change:.2f}%
+
+"""
+
+with open("fond_utveckling.txt", "a", encoding="utf-8") as f:
+    f.write(text + "\n")
+
+print("Data sparad!")
