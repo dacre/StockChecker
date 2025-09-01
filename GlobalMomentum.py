@@ -1,51 +1,63 @@
 # created using chatgpt
 
-# Filename: fetch_fund_yahoo.py
 import yfinance as yf
-from datetime import datetime
+from datetime import datetime, timedelta
 
-ticker = "0P0000YVZ3.ST"  # Länsförsäkringar Global Indexnära
-fund = yf.Ticker(ticker)
+# Lista med fonder/aktier (ticker, vanligt namn)
+tickers = [
+    ("0P0000YVZ3.ST", "LF Global Aktiefond A"),
+    ("INVE-B.ST", "Investor B"),
+    ("VOLV-B.ST", "Volvo B")
+]
 
-# Vi hämtar historisk data och beräkna 3-månars utveckling manuellt
-hist = fund.history(period="3mo")
-if len(hist) < 2:
-    raise ValueError("För lite historisk data")
+# Funktion för att beräkna procentuell förändring
+def calc_return(ticker, months):
+    fund = yf.Ticker(ticker)
+    hist = fund.history(period="1y")  # hämta 1 års data
 
-start_price = hist['Close'].iloc[0]
-end_price = hist['Close'].iloc[-1]
-pct_change = (end_price / start_price - 1) * 100
+    if hist.empty:
+        return None
 
+    end_price = hist["Close"].iloc[-1]
+    # Skatta startdatum (ungefär months*30 dagar tillbaka)
+    start_date = datetime.today() - timedelta(days=months*30)
+    hist_filtered = hist.loc[hist.index >= start_date]
+
+    if hist_filtered.empty:
+        return None
+
+    start_price = hist_filtered["Close"].iloc[0]
+    return (end_price / start_price - 1)
+
+# Spara allt i en lista av dictar
+results = []
+for ticker, name in tickers:
+    data = {
+        "ticker": ticker,
+        "name": name,
+        "returns": {
+            "3m": calc_return(ticker, 3),
+            "6m": calc_return(ticker, 6),
+            "12m": calc_return(ticker, 12)
+        }
+    }
+    results.append(data)
+
+# Skriv ut som kontroll
+for r in results:
+    print(f"{r['name']} ({r['ticker']})")
+    for period, val in r["returns"].items():
+        if val is not None:
+            print(f"  {period}: {val:.2%}")
+    print()
+
+# Append:a till fil med datum
 date_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-text = f"""{date_str}
-
-Fond: {ticker}
-3 mån utveckling: {pct_change:.2f}%
-
-"""
-
-import yfinance as yf
-from datetime import datetime
-
-ticker = "0P0000YVZ3.ST"  # LF Global Aktiefond A på Yahoo
-fund = yf.Ticker(ticker)
-
-# Hämta 2 års historik (daglig data)
-hist = fund.history(period="2y")
-
-# Räkna 12-månaders (≈ 252 handelsdagar) glidande medelvärde
-hist["MA12m"] = hist["Close"].rolling(window=252).mean()
-
-# Senaste värde
-latest_date = hist.index[-1].strftime("%Y-%m-%d")
-latest_price = hist["Close"].iloc[-1]
-latest_ma12 = hist["MA12m"].iloc[-1]
-
-print(f"Senaste datum: {latest_date}")
-print(f"Senaste stängningskurs: {latest_price:.2f}")
-print(f"12 mån glidande medelvärde: {latest_ma12:.2f}")
-
 with open("fond_utveckling.txt", "a", encoding="utf-8") as f:
-    f.write(text + "\n")
-
-print("Data sparad!")
+    f.write(date_str + "\n\n")
+    for r in results:
+        f.write(f"{r['name']} ({r['ticker']})\n")
+        for period, val in r["returns"].items():
+            if val is not None:
+                f.write(f"  {period}: {val:.2%}\n")
+        f.write("\n")
