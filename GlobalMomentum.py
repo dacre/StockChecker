@@ -34,10 +34,8 @@ def calc_ma(ticker, days):
     latest_price = hist["Close"].iloc[-1]
     latest_ma12 = hist["MA12m"].iloc[-1]
     
-    print(f"Senaste datum: {latest_date}")
-    print(f"Senaste stängningskurs: {latest_price:.2f}")
     print(f"12 mån glidande medelvärde: {latest_ma12:.2f}")
-    return latest_ma12
+    return f"{latest_ma12:.2f}/latest_price"
 
 # Funktion för att beräkna procentuell förändring
 def calc_return(ticker, months):
@@ -74,7 +72,7 @@ for ticker, name in tickers:
             "3m": calc_return(ticker, 3),
             "6m": calc_return(ticker, 6),
             "12m": calc_return(ticker, 12),
-            "200ma": calc_ma(ticker, 200)
+            "200ma/price": calc_ma(ticker, 200)
         }
     }
     results.append(data)
@@ -85,7 +83,10 @@ for r in results:
     print(f"{r['name']} ({r['ticker']})")
     for period, val in r["returns"].items():
         if val is not None:
-            print(f"  {period}: {val:.2%}")
+            if "period==200ma":
+                print(f"  {period}: {val}")
+            else:
+                print(f"  {period}: {val:.2%}")
     print()
 
 # Append:a till fil med datum
