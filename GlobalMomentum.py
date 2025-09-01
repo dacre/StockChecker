@@ -18,7 +18,7 @@ tickers = [
     ("0P0001BMMY.ST", "PLUS Småbolag Sverige Index"),
 ]
 
-def calc_ma(ticker, days) {
+def calc_ma(ticker, days):
     if days > 250
         raise new ValueError("too many days")
     fund = yf.Ticker(ticker)
@@ -38,7 +38,6 @@ def calc_ma(ticker, days) {
     print(f"Senaste stängningskurs: {latest_price:.2f}")
     print(f"12 mån glidande medelvärde: {latest_ma12:.2f}")
     return latest_ma12:.2f
-}
 
 # Funktion för att beräkna procentuell förändring
 def calc_return(ticker, months):
