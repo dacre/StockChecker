@@ -22,3 +22,20 @@ Volvo B (VOLV-B.ST)
   6m: -10.42%
   12m: 17.34%
 
+2025-09-01 06:14:28
+
+Avanza Zero (0P00005U1J.ST)
+  3m: 5.39%
+  6m: -0.73%
+  12m: 8.57%
+
+Avanza Global (0P0001ECQR.ST)
+  3m: 6.96%
+  6m: 4.95%
+  12m: 7.26%
+
+Swedbank Robur Emerging Europe C (0P0001QVRY.F)
+  3m: 8.21%
+  6m: 7.76%
+  12m: 24.45%
+
