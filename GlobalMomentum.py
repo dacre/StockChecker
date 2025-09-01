@@ -2,6 +2,7 @@
 
 import yfinance as yf
 from datetime import datetime, timedelta
+target_tz = pytz.timezone('CEST')
 
 # Lista med fonder/aktier (ticker, vanligt namn)
 tickers = [
@@ -26,10 +27,10 @@ def calc_return(ticker, months):
         return None
 
    # Ta bort tidszon för att undvika jämförelsefel
-    hist.index = hist.index.tz_localize(None)
+    #hist.index = hist.index.tz_localize(target_tz)
     end_price = hist["Close"].iloc[-1]
     # Skatta startdatum (ungefär months*30 dagar tillbaka)
-    start_date = datetime.today() - timedelta(days=months*30)
+    start_date = datetime.today(target_tz) - timedelta(days=months*30)
     hist_filtered = hist.loc[hist.index >= start_date]
    
     if hist_filtered.empty:
@@ -61,7 +62,7 @@ for r in results:
     print()
 
 # Append:a till fil med datum
-date_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+date_str = datetime.now(target_tz).strftime("%Y-%m-%d %H:%M:%S")
 with open("fond_utveckling.txt", "a", encoding="utf-8") as f:
     f.write(date_str + "\n\n")
     for r in results:
