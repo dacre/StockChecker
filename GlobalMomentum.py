@@ -27,10 +27,14 @@ def calc_return(ticker, months):
         return None
 
    # Ta bort tidszon för att undvika jämförelsefel
-    #hist.index = hist.index.tz_localize(target_tz)
+    if hist.index.tz is None:
+        hist.index = hist.index.tz_localize("Europe/Stockholm")
+    else:
+        hist.index = hist.index.tz_convert("Europe/Stockholm")
+
     end_price = hist["Close"].iloc[-1]
     # Skatta startdatum (ungefär months*30 dagar tillbaka)
-    start_date = datetime.today(ZoneInfo("Europe/Stockholm")) - timedelta(days=months*30)
+    start_date = datetime.now(ZoneInfo("Europe/Stockholm")) - timedelta(days=months*30)
     hist_filtered = hist.loc[hist.index >= start_date]
    
     if hist_filtered.empty:
