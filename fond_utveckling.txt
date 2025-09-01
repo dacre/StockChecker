@@ -39,3 +39,20 @@ Swedbank Robur Emerging Europe C (0P0001QVRY.F)
   6m: 7.76%
   12m: 24.45%
 
+2025-09-01 08:18:28
+
+Avanza Zero (0P00005U1J.ST)
+  3m: 5.39%
+  6m: -0.73%
+  12m: 8.57%
+
+Avanza Global (0P0001ECQR.ST)
+  3m: 6.96%
+  6m: 4.95%
+  12m: 7.26%
+
+Swedbank Robur Emerging Europe C (0P0001QVRY.F)
+  3m: 8.21%
+  6m: 7.76%
+  12m: 24.45%
+
