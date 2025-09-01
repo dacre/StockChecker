@@ -88,7 +88,7 @@ for r in results:
         if val is not None:
             print(f"  {period}: {val:.2%}")
     MAtext, bool in r["MA"].items()
-    print(f"{r['MAtext']}": ({r['bool']})")
+    print(f"{r['MAtext']}: ({r['bool']})")
     print()
 
 # Append:a till fil med datum
@@ -101,5 +101,5 @@ with open("fond_utveckling.txt", "a", encoding="utf-8") as f:
             if val is not None:
                 f.write(f"  {period}: {val:.2%}\n")
         MAtext, bool in r["MA"].items()
-        f.write(f"{r['MAtext']}": ({r['bool']})")
+        f.write(f"{r['MAtext']}: ({r['bool']})")
         f.write("\n")
