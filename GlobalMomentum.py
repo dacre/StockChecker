@@ -20,7 +20,7 @@ tickers = [
 
 def calc_ma(ticker, days):
     if days > 250:
-        raise new ValueError("too many days")
+        raise ValueError("too many days")
     fund = yf.Ticker(ticker)
     
     # Hämta 1 års historik (daglig data)
