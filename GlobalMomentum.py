@@ -18,7 +18,7 @@ tickers = [
     ("0P0001BMMY.ST", "PLUS Småbolag Sverige Index"),
 ]
 
-def calc_ma(ticker, days):
+def calc_ma_higher_then_price(ticker, days):
     if days > 250:
         raise ValueError("too many days")
     fund = yf.Ticker(ticker)
@@ -34,8 +34,9 @@ def calc_ma(ticker, days):
     latest_price = hist["Close"].iloc[-1]
     latest_ma12 = hist["MA12m"].iloc[-1]
     
+    print(f"pris: {latest_price:.2f}")
     print(f"12 mån glidande medelvärde: {latest_ma12:.2f}")
-    return f"{latest_ma12:.2f}/latest_price"
+    return latest_ma12 > latest_price
 
 # Funktion för att beräkna procentuell förändring
 def calc_return(ticker, months):
@@ -71,8 +72,10 @@ for ticker, name in tickers:
         "returns": {
             "3m": calc_return(ticker, 3),
             "6m": calc_return(ticker, 6),
-            "12m": calc_return(ticker, 12),
-            "200ma/price": calc_ma(ticker, 200)
+            "12m": calc_return(ticker, 12)    
+        },
+        "MA": {
+            "Is 200 moving average above price": calc_ma_higher_then_price(ticker, 200)
         }
     }
     results.append(data)
@@ -83,10 +86,9 @@ for r in results:
     print(f"{r['name']} ({r['ticker']})")
     for period, val in r["returns"].items():
         if val is not None:
-            if "period==200ma":
-                print(f"  {period}: {val}")
-            else:
-                print(f"  {period}: {val:.2%}")
+            print(f"  {period}: {val:.2%}")
+    MAtext, bool in r["MA"].items()
+    print(f"{r['MAtext']}": ({r['bool']})")
     print()
 
 # Append:a till fil med datum
@@ -98,4 +100,6 @@ with open("fond_utveckling.txt", "a", encoding="utf-8") as f:
         for period, val in r["returns"].items():
             if val is not None:
                 f.write(f"  {period}: {val:.2%}\n")
+        MAtext, bool in r["MA"].items()
+        f.write(f"{r['MAtext']}": ({r['bool']})")
         f.write("\n")
