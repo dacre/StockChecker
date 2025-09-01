@@ -8,7 +8,7 @@ tickers = [
     ("0P00005U1J.ST", "Avanza Zero"),
     ("0P0001ECQR.ST", "Avanza Global"),
     ("0P00000L2Y.ST", "Länsförsäkringar Japan Index"),
-    ("SGBSM.XC", "WisdomTree Physical Swiss Gold"),
+    ("SGBS.MI", "WisdomTree Physical Swiss Gold"),
     ("0P0000K9E7.ST", "Länsförsäkringar USA Index"),
     ("0P0001H4TL.ST", "Avanza Emerging Markets"),
     ("0P0001J6WY.ST", "Avanza Europa"),
