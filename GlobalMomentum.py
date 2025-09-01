@@ -37,7 +37,7 @@ def calc_ma(ticker, days):
     print(f"Senaste datum: {latest_date}")
     print(f"Senaste stängningskurs: {latest_price:.2f}")
     print(f"12 mån glidande medelvärde: {latest_ma12:.2f}")
-    return latest_ma12:.2f
+    return latest_ma12
 
 # Funktion för att beräkna procentuell förändring
 def calc_return(ticker, months):
