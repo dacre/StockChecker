@@ -157,3 +157,55 @@ PLUS Småbolag Sverige Index (0P0001BMMY.ST)
   6m: -0.76%
   12m: -1.40%
 
+2025-09-01 17:23:18
+
+Avanza Zero (0P00005U1J.ST)
+  3m: 5.39%
+  6m: -0.73%
+  12m: 8.57%
+
+Avanza Global (0P0001ECQR.ST)
+  3m: 6.96%
+  6m: 4.95%
+  12m: 7.26%
+
+Länsförsäkringar Japan Index (0P00000L2Y.ST)
+  3m: 6.53%
+  6m: 4.68%
+  12m: 6.44%
+
+WisdomTree Physical Swiss Gold (SGBS.MI)
+  3m: 0.48%
+  6m: 10.05%
+  12m: 31.17%
+
+Länsförsäkringar USA Index (0P0000K9E7.ST)
+  3m: 8.17%
+  6m: 6.09%
+  12m: 9.58%
+
+Avanza Emerging Markets (0P0001H4TL.ST)
+  3m: 7.45%
+  6m: 5.74%
+  12m: 9.38%
+
+Avanza Europa (0P0001J6WY.ST)
+  3m: -0.98%
+  6m: -2.23%
+  12m: -1.27%
+
+Spiltan Räntefond Sverige (0P00009NT9.ST)
+  3m: 0.91%
+  6m: 1.46%
+  12m: 3.11%
+
+Storebrand Obligation A SEK (0P00015E1M.ST)
+  3m: 1.11%
+  6m: 2.88%
+  12m: 3.03%
+
+PLUS Småbolag Sverige Index (0P0001BMMY.ST)
+  3m: 0.38%
+  6m: -0.76%
+  12m: -1.40%
+
