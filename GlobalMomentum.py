@@ -74,9 +74,7 @@ for ticker, name in tickers:
             "6m": calc_return(ticker, 6),
             "12m": calc_return(ticker, 12)    
         },
-        "MA": {
-            "Is 200 moving average above price": calc_ma_higher_then_price(ticker, 200)
-        }
+        "MA": calc_ma_higher_then_price(ticker, 200)
     }
     results.append(data)
 
@@ -87,8 +85,8 @@ for r in results:
     for period, val in r["returns"].items():
         if val is not None:
             print(f"  {period}: {val:.2%}")
-    MAtext, bool in r["MA"].items()
-    print(f"{MAtext}: {bool}")
+    text = "Is 200 moving average above price"
+    print(f"{text} = {r['MA']}")
     print()
 
 # Append:a till fil med datum
@@ -100,6 +98,6 @@ with open("fond_utveckling.txt", "a", encoding="utf-8") as f:
         for period, val in r["returns"].items():
             if val is not None:
                 f.write(f"  {period}: {val:.2%}\n")
-        MAtext, bool in r["MA"].items()
-        f.write(f"{MAtext}: {bool}")
+        text = "Is 200 moving average above price"
+        f.write(f"{text} = {r['MA']}")
         f.write("\n")
