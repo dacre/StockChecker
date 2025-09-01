@@ -18,6 +18,28 @@ tickers = [
     ("0P0001BMMY.ST", "PLUS Småbolag Sverige Index"),
 ]
 
+def calc_ma(ticker, days) {
+    if days > 250
+        raise new ValueError("too many days")
+    fund = yf.Ticker(ticker)
+    
+    # Hämta 1 års historik (daglig data)
+    hist = fund.history(period="1y")
+    
+    # Räkna 200 dagars glidande medelvärde (referens: 12-månaders (≈ 252 handelsdagar))
+    hist["MA12m"] = hist["Close"].rolling(window=days).mean()
+    
+    # Senaste värde
+    latest_date = hist.index[-1].strftime("%Y-%m-%d")
+    latest_price = hist["Close"].iloc[-1]
+    latest_ma12 = hist["MA12m"].iloc[-1]
+    
+    print(f"Senaste datum: {latest_date}")
+    print(f"Senaste stängningskurs: {latest_price:.2f}")
+    print(f"12 mån glidande medelvärde: {latest_ma12:.2f}")
+    return latest_ma12:.2f
+}
+
 # Funktion för att beräkna procentuell förändring
 def calc_return(ticker, months):
     fund = yf.Ticker(ticker)
@@ -52,10 +74,12 @@ for ticker, name in tickers:
         "returns": {
             "3m": calc_return(ticker, 3),
             "6m": calc_return(ticker, 6),
-            "12m": calc_return(ticker, 12)
+            "12m": calc_return(ticker, 12),
+            "200ma": calc_ma(ticker, 200)
         }
     }
     results.append(data)
+
 
 # Skriv ut som kontroll
 for r in results:
