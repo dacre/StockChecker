@@ -7,8 +7,14 @@ from datetime import datetime, timedelta
 tickers = [
     ("0P00005U1J.ST", "Avanza Zero"),
     ("0P0001ECQR.ST", "Avanza Global"),
-    ("0P0001QVRY.F", "Swedbank Robur Emerging Europe C"),
-    # ... tills vidare, lägg till fler när du verifierat tickers
+    ("0P00000L2Y.ST", "Länsförsäkringar Japan Index"),
+    ("JE00B588CD74.SG", "WisdomTree Physical Swiss Gold"),
+    ("0P0000K9E7.ST", "Länsförsäkringar USA Index"),
+    ("0P0001H4TL.ST", "Avanza Emerging Markets"),
+    ("0P0001J6WY.ST", "Avanza Europa"),
+    ("0P00009NT9.ST", "Spiltan Räntefond Sverige"),
+    ("0P00015E1M.ST", "Storebrand Obligation A SEK"),
+    ("0P0001BMMY.ST", "PLUS Småbolag Sverige Index"),
 ]
 
 # Funktion för att beräkna procentuell förändring
