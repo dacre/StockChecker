@@ -5,9 +5,10 @@ from datetime import datetime, timedelta
 
 # Lista med fonder/aktier (ticker, vanligt namn)
 tickers = [
-    ("0P0000YVZ3.ST", "LF Global Aktiefond A"),
-    ("INVE-B.ST", "Investor B"),
-    ("VOLV-B.ST", "Volvo B")
+    ("0P00005U1J.ST", "Avanza Zero"),
+    ("0P0001ECQR.ST", "Avanza Global"),
+    ("0P0001QVRY.F", "Swedbank Robur Emerging Europe C"),
+    # ... tills vidare, lägg till fler när du verifierat tickers
 ]
 
 # Funktion för att beräkna procentuell förändring
