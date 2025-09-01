@@ -2,6 +2,7 @@
 
 import yfinance as yf
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 
 # Lista med fonder/aktier (ticker, vanligt namn)
 tickers = [
