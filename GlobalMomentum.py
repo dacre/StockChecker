@@ -105,23 +105,16 @@ for ticker, name in tickers:
     }
     results.append(data)
 
+# lägg till rankingar och sortera
 results = add_and_sort_rankings(results)
 
-# Kontrollutskrift
+# === Utskrift ===
+print("Rankinglista (bäst först):")
 for r in results:
     print(f"{r['name']} ({r['ticker']})")
-    print("  Returns:", r["returns"])
+    print("  Returns:", {k: f"{v:.2%}" if v is not None else "–" for k, v in r["returns"].items()})
+    print("  MA200 över pris:", r["MA"])
     print("  Rankings:", r["rankings"])
-    print()
-
-# Skriv ut som kontroll
-for r in results:
-    print(f"{r['name']} ({r['ticker']})")
-    for period, val in r["returns"].items():
-        if val is not None:
-            print(f"  {period}: {val:.2%}")
-    text = "Is 200 moving average above price"
-    print(f"{text} = {r['MA']}")
     print()
 
 # Append:a till fil med datum
