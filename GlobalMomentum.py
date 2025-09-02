@@ -18,6 +18,33 @@ tickers = [
     ("0P0001BMMY.ST", "PLUS Småbolag Sverige Index"),
 ]
 
+def add_and_sort_rankings(results):
+    periods = ["3m", "6m", "12m"]
+
+    # Sätt ranking för varje period
+    for period in periods:
+        # Sortera resultat med högst avkastning först
+        sorted_res = sorted(
+            results,
+            key=lambda r: (r["returns"][period] is not None, r["returns"][period]),
+            reverse=True
+        )
+        # Tilldela ranking (1 = bäst)
+        for rank, r in enumerate(sorted_res, start=1):
+            if "rankings" not in r:
+                r["rankings"] = {}
+            r["rankings"][period] = rank
+
+    # Summera rankingar
+    for r in results:
+        r["rankings"]["total"] = sum(
+            r["rankings"][p] for p in periods if p in r["rankings"]
+        )
+
+    # Sortera efter total ranking
+    results_sorted = sorted(results, key=lambda r: r["rankings"]["total"])
+    return results_sorted
+
 def calc_ma_higher_then_price(ticker, days):
     if days > 250:
         raise ValueError("too many days")
@@ -78,6 +105,14 @@ for ticker, name in tickers:
     }
     results.append(data)
 
+results = add_rankings(results)
+
+# Kontrollutskrift
+for r in results:
+    print(f"{r['name']} ({r['ticker']})")
+    print("  Returns:", r["returns"])
+    print("  Rankings:", r["rankings"])
+    print()
 
 # Skriv ut som kontroll
 for r in results:
