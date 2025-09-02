@@ -79,6 +79,7 @@ def calc_return(ticker, months):
     return (end_price / start_price - 1)
 
 results = []
+days = 200
 for ticker, name in tickers:
     data = {
         "ticker": ticker,
@@ -87,7 +88,7 @@ for ticker, name in tickers:
             "3m": calc_return(ticker, 3),
             "6m": calc_return(ticker, 6),
             "12m": calc_return(ticker, 12),
-            "MA": calc_ma_higher_then_price(ticker, 200)
+            "MA": calc_ma_higher_then_price(ticker, days)
         },
         
     }
@@ -99,7 +100,7 @@ print("Rankinglista (bäst först):")
 for r in results:
     print(f"{r['name']} ({r['ticker']})")
     print("  Returns:", {k: f"{v:.2%}" if v is not None else "–" for k, v in r["returns"].items()})
-    print("  MA200 över pris:", r['returns']['MA'])
+    print("  Moving average for {days} over price:", r['returns']['MA']:.2%)
     print("  Rankings:", r['rankings'])
     print()
 
