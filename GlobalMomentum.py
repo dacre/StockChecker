@@ -112,4 +112,4 @@ with open("fond_utveckling.txt", "w", encoding="utf-8") as f:
         f.write(f"{r['name']} ({r['ticker']})\n")
         f.write(f"  Total ranking: {r['rankings']['total']}  "
                 f"(3m={r['rankings']['3m']}, 6m={r['rankings']['6m']}, 12m={r['rankings']['12m']})\n")
-        f.write(f"  MA-status: {r["MA"]}\n\n")
+        f.write(f"  MA-status: {r["returns"].r["MA"]}\n\n")
