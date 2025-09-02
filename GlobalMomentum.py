@@ -63,7 +63,7 @@ def calc_ma_higher_then_price(ticker, days):
     
     print(f"pris: {latest_price:.2f}")
     print(f"12 mån glidande medelvärde: {latest_ma12:.2f}")
-    return latest_ma12 > latest_price
+    return latest_ma12 < latest_price
 
 # Funktion för att beräkna procentuell förändring
 def calc_return(ticker, months):
