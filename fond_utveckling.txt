@@ -103,3 +103,55 @@ Avanza Europa (0P0001J6WY.ST)
   6m: -2.39%
   12m: -1.98%
 Is 200 moving average above price = True
+2025-09-02 08:24:54
+
+Länsförsäkringar USA Index (0P0000K9E7.ST)
+  3m: 8.00%
+  6m: 5.71%
+  12m: 8.52%
+Is 200 moving average above price = False
+WisdomTree Physical Swiss Gold (SGBS.MI)
+  3m: 1.03%
+  6m: 10.31%
+  12m: 31.17%
+Is 200 moving average above price = False
+Länsförsäkringar Japan Index (0P00000L2Y.ST)
+  3m: 7.47%
+  6m: 6.61%
+  12m: 5.69%
+Is 200 moving average above price = False
+Avanza Emerging Markets (0P0001H4TL.ST)
+  3m: 4.86%
+  6m: 5.22%
+  12m: 8.87%
+Is 200 moving average above price = False
+Avanza Global (0P0001ECQR.ST)
+  3m: 6.77%
+  6m: 4.69%
+  12m: 6.32%
+Is 200 moving average above price = False
+Avanza Zero (0P00005U1J.ST)
+  3m: 4.20%
+  6m: -1.28%
+  12m: 7.82%
+Is 200 moving average above price = False
+Storebrand Obligation A SEK (0P00015E1M.ST)
+  3m: 1.07%
+  6m: 2.84%
+  12m: 3.12%
+Is 200 moving average above price = False
+Spiltan Räntefond Sverige (0P00009NT9.ST)
+  3m: 0.91%
+  6m: 1.51%
+  12m: 3.14%
+Is 200 moving average above price = False
+PLUS Småbolag Sverige Index (0P0001BMMY.ST)
+  3m: -0.76%
+  6m: -1.60%
+  12m: -2.13%
+Is 200 moving average above price = True
+Avanza Europa (0P0001J6WY.ST)
+  3m: -1.79%
+  6m: -2.39%
+  12m: -1.98%
+Is 200 moving average above price = True
