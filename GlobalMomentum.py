@@ -18,9 +18,10 @@ tickers = [
 ]
 
 def add_and_sort_rankings(results):
-    periods = ["3m", "6m", "12m", "MA"]
+    periods = ["3m", "6m", "12m"]
+    tie_breaker = "MA"
 
-    for period in periods:
+    for period in periods + [tie_breaker]:
         sorted_res = sorted(
             results,
             key=lambda r: (r["returns"][period] is not None, r["returns"][period]),
@@ -36,8 +37,12 @@ def add_and_sort_rankings(results):
             r["rankings"][p] for p in periods if p in r["rankings"]
         )
 
-    results_sorted = sorted(results, key=lambda r: r["rankings"]["total"])
+    results_sorted = sorted(
+        results,
+        key=lambda r: (r["rankings"]["total"], r["rankings"][tie_breaker])
+    )
     return results_sorted
+
 
 def calc_ma_higher_then_price(ticker, days):
     if days > 250:
