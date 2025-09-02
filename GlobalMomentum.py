@@ -99,8 +99,8 @@ print("Rankinglista (bäst först):")
 for r in results:
     print(f"{r['name']} ({r['ticker']})")
     print("  Returns:", {k: f"{v:.2%}" if v is not None else "–" for k, v in r["returns"].items()})
-    print("  MA200 över pris:", r["returns"]["MA"])
-    print("  Rankings:", r["rankings"])
+    print("  MA200 över pris:", r['returns']['MA'])
+    print("  Rankings:", r['rankings'])
     print()
 
 timestamp = datetime.now(ZoneInfo("Europe/Stockholm")).strftime("%Y-%m-%d %H:%M:%S")
@@ -112,4 +112,4 @@ with open("fond_utveckling.txt", "w", encoding="utf-8") as f:
         f.write(f"{r['name']} ({r['ticker']})\n")
         f.write(f"  Total ranking: {r['rankings']['total']}  "
                 f"(3m={r['rankings']['3m']}, 6m={r['rankings']['6m']}, 12m={r['rankings']['12m']})\n")
-        f.write(f"  MA-status: {r["returns"]["MA"]}\n\n")
+        f.write(f"  MA-status: {r['returns']['MA']}\n\n")
