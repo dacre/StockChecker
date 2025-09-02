@@ -1,157 +1,43 @@
-
-2025-09-01 20:47:28
-
-Avanza Zero (0P00005U1J.ST)
-  3m: 5.39%
-  6m: -0.73%
-  12m: 8.57%
-Is 200 moving average above price = False
-Avanza Global (0P0001ECQR.ST)
-  3m: 6.96%
-  6m: 4.95%
-  12m: 7.26%
-Is 200 moving average above price = False
-Länsförsäkringar Japan Index (0P00000L2Y.ST)
-  3m: 6.53%
-  6m: 4.68%
-  12m: 6.44%
-Is 200 moving average above price = False
-WisdomTree Physical Swiss Gold (SGBS.MI)
-  3m: 0.48%
-  6m: 10.05%
-  12m: 31.17%
-Is 200 moving average above price = False
-Länsförsäkringar USA Index (0P0000K9E7.ST)
-  3m: 8.17%
-  6m: 6.09%
-  12m: 9.58%
-Is 200 moving average above price = False
-Avanza Emerging Markets (0P0001H4TL.ST)
-  3m: 7.45%
-  6m: 5.74%
-  12m: 9.38%
-Is 200 moving average above price = False
-Avanza Europa (0P0001J6WY.ST)
-  3m: -0.98%
-  6m: -2.23%
-  12m: -1.27%
-Is 200 moving average above price = False
-Spiltan Räntefond Sverige (0P00009NT9.ST)
-  3m: 0.91%
-  6m: 1.46%
-  12m: 3.11%
-Is 200 moving average above price = False
-Storebrand Obligation A SEK (0P00015E1M.ST)
-  3m: 1.11%
-  6m: 2.88%
-  12m: 3.03%
-Is 200 moving average above price = False
-PLUS Småbolag Sverige Index (0P0001BMMY.ST)
-  3m: 0.38%
-  6m: -0.76%
-  12m: -1.40%
-Is 200 moving average above price = False
-2025-09-02 08:20:02
+Fondrapport 2025-09-02 08:32:46 (Stockholm-tid)
+==================================================
 
 Länsförsäkringar USA Index (0P0000K9E7.ST)
-  3m: 8.00%
-  6m: 5.71%
-  12m: 8.52%
-Is 200 moving average above price = False
-WisdomTree Physical Swiss Gold (SGBS.MI)
-  3m: 1.03%
-  6m: 10.31%
-  12m: 31.17%
-Is 200 moving average above price = False
-Länsförsäkringar Japan Index (0P00000L2Y.ST)
-  3m: 7.47%
-  6m: 6.61%
-  12m: 5.69%
-Is 200 moving average above price = False
-Avanza Emerging Markets (0P0001H4TL.ST)
-  3m: 4.86%
-  6m: 5.22%
-  12m: 8.87%
-Is 200 moving average above price = False
-Avanza Global (0P0001ECQR.ST)
-  3m: 6.77%
-  6m: 4.69%
-  12m: 6.32%
-Is 200 moving average above price = False
-Avanza Zero (0P00005U1J.ST)
-  3m: 4.20%
-  6m: -1.28%
-  12m: 7.82%
-Is 200 moving average above price = False
-Storebrand Obligation A SEK (0P00015E1M.ST)
-  3m: 1.07%
-  6m: 2.84%
-  12m: 3.12%
-Is 200 moving average above price = False
-Spiltan Räntefond Sverige (0P00009NT9.ST)
-  3m: 0.91%
-  6m: 1.51%
-  12m: 3.14%
-Is 200 moving average above price = False
-PLUS Småbolag Sverige Index (0P0001BMMY.ST)
-  3m: -0.76%
-  6m: -1.60%
-  12m: -2.13%
-Is 200 moving average above price = True
-Avanza Europa (0P0001J6WY.ST)
-  3m: -1.79%
-  6m: -2.39%
-  12m: -1.98%
-Is 200 moving average above price = True
-2025-09-02 08:24:54
+  Total ranking: 7  (3m=1, 6m=3, 12m=3)
+  MA-status: Pris UNDER MA200 ❌
 
-Länsförsäkringar USA Index (0P0000K9E7.ST)
-  3m: 8.00%
-  6m: 5.71%
-  12m: 8.52%
-Is 200 moving average above price = False
 WisdomTree Physical Swiss Gold (SGBS.MI)
-  3m: 1.03%
-  6m: 10.31%
-  12m: 31.17%
-Is 200 moving average above price = False
+  Total ranking: 9  (3m=7, 6m=1, 12m=1)
+  MA-status: Pris UNDER MA200 ❌
+
 Länsförsäkringar Japan Index (0P00000L2Y.ST)
-  3m: 7.47%
-  6m: 6.61%
-  12m: 5.69%
-Is 200 moving average above price = False
+  Total ranking: 10  (3m=2, 6m=2, 12m=6)
+  MA-status: Pris UNDER MA200 ❌
+
 Avanza Emerging Markets (0P0001H4TL.ST)
-  3m: 4.86%
-  6m: 5.22%
-  12m: 8.87%
-Is 200 moving average above price = False
+  Total ranking: 10  (3m=4, 6m=4, 12m=2)
+  MA-status: Pris UNDER MA200 ❌
+
 Avanza Global (0P0001ECQR.ST)
-  3m: 6.77%
-  6m: 4.69%
-  12m: 6.32%
-Is 200 moving average above price = False
+  Total ranking: 13  (3m=3, 6m=5, 12m=5)
+  MA-status: Pris UNDER MA200 ❌
+
 Avanza Zero (0P00005U1J.ST)
-  3m: 4.20%
-  6m: -1.28%
-  12m: 7.82%
-Is 200 moving average above price = False
+  Total ranking: 17  (3m=5, 6m=8, 12m=4)
+  MA-status: Pris UNDER MA200 ❌
+
 Storebrand Obligation A SEK (0P00015E1M.ST)
-  3m: 1.07%
-  6m: 2.84%
-  12m: 3.12%
-Is 200 moving average above price = False
+  Total ranking: 20  (3m=6, 6m=6, 12m=8)
+  MA-status: Pris UNDER MA200 ❌
+
 Spiltan Räntefond Sverige (0P00009NT9.ST)
-  3m: 0.91%
-  6m: 1.51%
-  12m: 3.14%
-Is 200 moving average above price = False
+  Total ranking: 22  (3m=8, 6m=7, 12m=7)
+  MA-status: Pris UNDER MA200 ❌
+
 PLUS Småbolag Sverige Index (0P0001BMMY.ST)
-  3m: -0.76%
-  6m: -1.60%
-  12m: -2.13%
-Is 200 moving average above price = True
+  Total ranking: 28  (3m=9, 6m=9, 12m=10)
+  MA-status: Pris ÖVER MA200 ✅
+
 Avanza Europa (0P0001J6WY.ST)
-  3m: -1.79%
-  6m: -2.39%
-  12m: -1.98%
-Is 200 moving average above price = True
+  Total ranking: 29  (3m=10, 6m=10, 12m=9)
+  MA-status: Pris ÖVER MA200 ✅
+
