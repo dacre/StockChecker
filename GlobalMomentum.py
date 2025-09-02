@@ -99,9 +99,9 @@ results = add_and_sort_rankings(results)
 print("Rankinglista (bäst först):")
 for r in results:
     print(f"{r['name']} ({r['ticker']})")
-    print("  Returns:", {k: f"{v:.2%}" if v is not None else "–" for k, v in r["returns"].items()})
-    print("  Moving average for {days} over price:", r['returns']['MA']:.2%)
-    print("  Rankings:", r['rankings'])
+    print(f"  Returns:", {k: f"{v:.2%}" if v is not None else "–" for k, v in r["returns"].items()})
+    print(f"  Moving average for {days} over price: {r['returns']['MA']:.2%}")
+    print(f"  Rankings:", r['rankings'])
     print()
 
 timestamp = datetime.now(ZoneInfo("Europe/Stockholm")).strftime("%Y-%m-%d %H:%M:%S")
