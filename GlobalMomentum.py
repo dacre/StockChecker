@@ -18,7 +18,7 @@ tickers = [
 ]
 
 def add_and_sort_rankings(results):
-    periods = ["3m", "6m", "12m"]
+    periods = ["3m", "6m", "12m", "MA"]
 
     for period in periods:
         sorted_res = sorted(
@@ -52,7 +52,7 @@ def calc_ma_higher_then_price(ticker, days):
     latest_price = hist["Close"].iloc[-1]
     latest_ma12 = hist["MA12m"].iloc[-1]
     
-    return latest_ma12 < latest_price
+    return (latest_price - latest_ma12) / latest_price
 
 def calc_return(ticker, months):
     fund = yf.Ticker(ticker)
@@ -86,9 +86,10 @@ for ticker, name in tickers:
         "returns": {
             "3m": calc_return(ticker, 3),
             "6m": calc_return(ticker, 6),
-            "12m": calc_return(ticker, 12)    
+            "12m": calc_return(ticker, 12),
+            "MA": calc_ma_higher_then_price(ticker, 200)
         },
-        "MA": calc_ma_higher_then_price(ticker, 200)
+        
     }
     results.append(data)
 
@@ -98,7 +99,7 @@ print("Rankinglista (bäst först):")
 for r in results:
     print(f"{r['name']} ({r['ticker']})")
     print("  Returns:", {k: f"{v:.2%}" if v is not None else "–" for k, v in r["returns"].items()})
-    print("  MA200 över pris:", r["MA"])
+    print("  MA200 över pris:", r["returns"].r["MA"])
     print("  Rankings:", r["rankings"])
     print()
 
@@ -111,6 +112,4 @@ with open("fond_utveckling.txt", "w", encoding="utf-8") as f:
         f.write(f"{r['name']} ({r['ticker']})\n")
         f.write(f"  Total ranking: {r['rankings']['total']}  "
                 f"(3m={r['rankings']['3m']}, 6m={r['rankings']['6m']}, 12m={r['rankings']['12m']})\n")
-
-        ma_text = "Pris ÖVER MA200 ✅" if r["MA"] else "Pris UNDER MA200 ❌" # This part enables the user of the report to choose to filter out negative MA200
-        f.write(f"  MA-status: {ma_text}\n\n")
+        f.write(f"  MA-status: {r["MA"]}\n\n")
