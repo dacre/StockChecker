@@ -117,15 +117,19 @@ for r in results:
     print("  Rankings:", r["rankings"])
     print()
 
-# Append:a till fil med datum
-date_str = datetime.now(ZoneInfo("Europe/Stockholm")).strftime("%Y-%m-%d %H:%M:%S")
-with open("fond_utveckling.txt", "a", encoding="utf-8") as f:
-    f.write(date_str + "\n\n")
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+# === Skriv resultat till fil ===
+timestamp = datetime.now(ZoneInfo("Europe/Stockholm")).strftime("%Y-%m-%d %H:%M:%S")
+with open("fond_utveckling.txt", "w", encoding="utf-8") as f:  # "w" = ersätt allt
+    f.write(f"Fondrapport {timestamp} (Stockholm-tid)\n")
+    f.write("="*50 + "\n\n")
+
     for r in results:
         f.write(f"{r['name']} ({r['ticker']})\n")
-        for period, val in r["returns"].items():
-            if val is not None:
-                f.write(f"  {period}: {val:.2%}\n")
-        text = "Is 200 moving average above price"
-        f.write(f"{text} = {r['MA']}")
-        f.write("\n")
+        f.write(f"  Total ranking: {r['rankings']['total']}  "
+                f"(3m={r['rankings']['3m']}, 6m={r['rankings']['6m']}, 12m={r['rankings']['12m']})\n")
+
+        ma_text = "Pris ÖVER MA200 ✅" if r["MA"] else "Pris UNDER MA200 ❌"
+        f.write(f"  MA-status: {ma_text}\n\n")
