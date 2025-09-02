@@ -105,7 +105,7 @@ for ticker, name in tickers:
     }
     results.append(data)
 
-results = add_rankings(results)
+results = add_and_sort_rankings(results)
 
 # Kontrollutskrift
 for r in results:
