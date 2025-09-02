@@ -52,8 +52,8 @@ def calc_ma_higher_then_price(ticker, days):
     latest_price = hist["Close"].iloc[-1]
     latest_ma12 = hist["MA12m"].iloc[-1]
     
-    print(f"pris: {latest_price:.2f}")
-    print(f{days}" days MA: {latest_ma12:.2f}")
+    print(f"latest price: {latest_price:.2f}")
+    print(f"{days} days MA: {latest_ma12:.2f}")
     return latest_ma12 < latest_price
 
 def calc_return(ticker, months):
