@@ -1,43 +1,43 @@
-Fondrapport 2025-09-25 10:17:01 (Stockholm-tid)
+Fondrapport 2025-09-26 10:17:56 (Stockholm-tid)
 ==================================================
 
 JPM China A (dist) USD (0P00000RSN)
   Total ranking: 4  (3m=1, 6m=1, 12m=2)
-  Moving average for 200 over price: 16.28%
+  Moving average for 200 over price: 17.81%
 
 WisdomTree Physical Swiss Gold (SGBS.MI)
   Total ranking: 8  (3m=2, 6m=5, 12m=1)
-  Moving average for 200 over price: 11.40%
+  Moving average for 200 over price: 11.70%
 
 Avanza Emerging Markets (0P0001H4TL.ST)
   Total ranking: 10  (3m=3, 6m=2, 12m=5)
-  Moving average for 200 over price: 8.06%
+  Moving average for 200 over price: 9.12%
 
 Länsförsäkringar USA Index (0P0000K9E7.ST)
-  Total ranking: 11  (3m=5, 6m=3, 12m=3)
-  Moving average for 200 over price: 3.06%
-
-Avanza Zero (0P00005U1J.ST)
-  Total ranking: 14  (3m=4, 6m=6, 12m=4)
-  Moving average for 200 over price: 5.93%
+  Total ranking: 12  (3m=5, 6m=3, 12m=4)
+  Moving average for 200 over price: 3.36%
 
 Länsförsäkringar Japan Index (0P00000L2Y.ST)
-  Total ranking: 16  (3m=6, 6m=4, 12m=6)
-  Moving average for 200 over price: 5.13%
+  Total ranking: 13  (3m=6, 6m=4, 12m=3)
+  Moving average for 200 over price: 5.08%
+
+Avanza Zero (0P00005U1J.ST)
+  Total ranking: 16  (3m=4, 6m=6, 12m=6)
+  Moving average for 200 over price: 5.14%
+
+Storebrand Obligation A SEK (0P00015E1M.ST)
+  Total ranking: 24  (3m=8, 6m=8, 12m=8)
+  Moving average for 200 over price: 1.65%
 
 Spiltan Räntefond Sverige (0P00009NT9.ST)
   Total ranking: 24  (3m=7, 6m=10, 12m=7)
-  Moving average for 200 over price: 1.28%
-
-Storebrand Obligation A SEK (0P00015E1M.ST)
-  Total ranking: 25  (3m=8, 6m=9, 12m=8)
-  Moving average for 200 over price: 1.68%
+  Moving average for 200 over price: 1.27%
 
 Avanza Europa (0P0001J6WY.ST)
-  Total ranking: 26  (3m=9, 6m=8, 12m=9)
-  Moving average for 200 over price: -0.11%
+  Total ranking: 25  (3m=9, 6m=7, 12m=9)
+  Moving average for 200 over price: -0.34%
 
 PLUS Småbolag Sverige Index (0P0001BMMY.ST)
-  Total ranking: 27  (3m=10, 6m=7, 12m=10)
-  Moving average for 200 over price: -0.94%
+  Total ranking: 29  (3m=10, 6m=9, 12m=10)
+  Moving average for 200 over price: -2.47%
 
