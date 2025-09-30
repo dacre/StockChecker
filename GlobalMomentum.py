@@ -15,7 +15,8 @@ tickers = [
     ("0P00009NT9.ST", "Spiltan Räntefond Sverige"),
     ("0P00015E1M.ST", "Storebrand Obligation A SEK"),
     ("0P0001BMMY.ST", "PLUS Småbolag Sverige Index"),
-    ("0P00000RSN", "JPM China A (dist) USD")
+    ("0P00000RSN", "JPM China A (dist) USD"),
+    ("0P0001QVRY.F", "Swedbank Robur Emerging Europe C EUR")
 ]
 
 def add_and_sort_rankings(results):
