@@ -16,6 +16,7 @@ tickers = [
     ("0P00015E1M.ST", "Storebrand Obligation A SEK"),
     ("0P0001BMMY.ST", "PLUS Småbolag Sverige Index"),
     ("0P00000RSN", "JPM China A (dist) USD"),
+    ("0P0001ECQR.ST", "Avanza Global",
     ("0P0001QVRY.F", "Swedbank Robur Emerging Europe C EUR")
 ]
 
