@@ -1,12 +1,12 @@
-Fondrapport 2026-01-01 09:19:26 (Stockholm-tid)
+Fondrapport 2026-01-02 09:19:23 (Stockholm-tid)
 ==================================================
 
 WisdomTree Physical Swiss Gold (SGBS.MI)
   Total ranking: 3  (3m=1, 6m=1, 12m=1)
-  Moving average for 200 over price: 16.18%
+  Moving average for 200 over price: 16.48%
 
 Avanza Zero (0P00005U1J.ST)
-  Total ranking: 10  (3m=3, 6m=3, 12m=4)
+  Total ranking: 9  (3m=3, 6m=2, 12m=4)
   Moving average for 200 over price: 9.76%
 
 Swedbank Robur Emerging Europe C EUR (0P0001QVRY.F)
@@ -14,15 +14,15 @@ Swedbank Robur Emerging Europe C EUR (0P0001QVRY.F)
   Moving average for 200 over price: 6.81%
 
 PLUS Allabolag Sverige Index (0P0001KW2U.ST)
-  Total ranking: 15  (3m=4, 6m=6, 12m=5)
+  Total ranking: 16  (3m=4, 6m=6, 12m=6)
   Moving average for 200 over price: 6.63%
 
 JPM China A (dist) USD (0P00000RSN)
-  Total ranking: 17  (3m=13, 6m=2, 12m=2)
-  Moving average for 200 over price: 6.64%
+  Total ranking: 18  (3m=13, 6m=3, 12m=2)
+  Moving average for 200 over price: 5.90%
 
 Avanza Emerging Markets (0P0001H4TL.ST)
-  Total ranking: 21  (3m=11, 6m=4, 12m=6)
+  Total ranking: 20  (3m=11, 6m=4, 12m=5)
   Moving average for 200 over price: 8.18%
 
 Avanza Europa (0P0001J6WY.ST)
