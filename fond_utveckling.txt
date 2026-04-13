@@ -1,8 +1,8 @@
-Fondrapport 2026-04-12 10:38:23 (Stockholm-tid)
+Fondrapport 2026-04-13 11:28:08 (Stockholm-tid)
 ==================================================
 
 Avanza Emerging Markets (0P0001H4TL.ST)
-  Total ranking: 6  (3m=1, 6m=4, 12m=1)
+  Total ranking: 5  (3m=1, 6m=3, 12m=1)
   Moving average for 200 over price: 12.44%
 
 Swedbank Robur Emerging Europe C EUR (0P0001QVRY.F)
@@ -14,11 +14,11 @@ Avanza Zero (0P00005U1J.ST)
   Moving average for 200 over price: 9.98%
 
 WisdomTree Physical Swiss Gold (SGBS.MI)
-  Total ranking: 10  (3m=5, 6m=3, 12m=2)
-  Moving average for 200 over price: 12.91%
+  Total ranking: 10  (3m=4, 6m=4, 12m=2)
+  Moving average for 200 over price: 12.14%
 
 Länsförsäkringar Japan Index (0P00000L2Y.ST)
-  Total ranking: 15  (3m=4, 6m=6, 12m=5)
+  Total ranking: 16  (3m=5, 6m=6, 12m=5)
   Moving average for 200 over price: 7.25%
 
 PLUS Allabolag Sverige Index (0P0001KW2U.ST)
@@ -26,11 +26,11 @@ PLUS Allabolag Sverige Index (0P0001KW2U.ST)
   Moving average for 200 over price: 6.35%
 
 Avanza Global (0P0001ECQR.ST)
-  Total ranking: 24  (3m=10, 6m=8, 12m=6)
+  Total ranking: 22  (3m=9, 6m=7, 12m=6)
   Moving average for 200 over price: 2.91%
 
 Avanza Europa (0P0001J6WY.ST)
-  Total ranking: 25  (3m=8, 6m=7, 12m=10)
+  Total ranking: 26  (3m=8, 6m=8, 12m=10)
   Moving average for 200 over price: 3.67%
 
 Spiltan Räntefond Sverige (0P00009NT9.ST)
@@ -42,7 +42,7 @@ Länsförsäkringar USA Index (0P0000K9E7.ST)
   Moving average for 200 over price: 1.22%
 
 Storebrand Obligation A SEK (0P00015E1M.ST)
-  Total ranking: 31  (3m=9, 6m=10, 12m=12)
+  Total ranking: 32  (3m=10, 6m=10, 12m=12)
   Moving average for 200 over price: 0.29%
 
 JPM China A (dist) USD (0P00000RSN)
